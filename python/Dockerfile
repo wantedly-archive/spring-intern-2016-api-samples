@@ -2,8 +2,7 @@ FROM python:2.7.10-slim
 
 WORKDIR /app
 COPY . /app/
-RUN pip install tornado
-RUN pip install requests
+RUN pip install -r packages_requirements.txt
 
 EXPOSE 8080
 
