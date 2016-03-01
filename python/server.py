@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import tornado.ioloop
 import tornado.web
+import tornado.httpserver
 import json
 import requests
 
@@ -32,5 +33,7 @@ application = tornado.web.Application([
 ])
 
 if __name__ == "__main__":
-    application.listen(8080)
-    tornado.ioloop.IOLoop.instance().start()
+    http_server = tornado.httpserver.HTTPServer(application)
+    http_server.listen(8080)
+    #application.listen(8080)
+    #tornado.ioloop.IOLoop.instance().start()
