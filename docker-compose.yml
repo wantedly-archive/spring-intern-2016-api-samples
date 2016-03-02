@@ -1,6 +1,4 @@
-version: "2"
-services:
-  web:
-    build: python
-    ports:
-      - "8080"
+web:
+  build: python
+  ports:
+    - "8080"
